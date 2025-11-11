@@ -58,7 +58,7 @@ This plugin is extremely lightweight and efficient.
 This entire process is highly optimized to add zero lag to your server's combat.
 
 ### 📦 Requirements
-
+* **Spigot will work but we don't prefer it**
 * **Paper and Folia** (or a Paper-fork like Pufferfish)
 * **[Floodgate](https://github.com/GeyserMC/Floodgate)**
 
