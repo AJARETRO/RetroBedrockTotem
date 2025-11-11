@@ -59,7 +59,7 @@ This entire process is highly optimized to add zero lag to your server's combat.
 
 ### 📦 Requirements
 
-* **Paper** (or a Paper-fork like Pufferfish)
+* **Paper and Folia** (or a Paper-fork like Pufferfish)
 * **[Floodgate](https://github.com/GeyserMC/Floodgate)**
 
 ### 💾 Installation
