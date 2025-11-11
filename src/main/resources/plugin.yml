@@ -1,0 +1,12 @@
+name: RetroBedrockTotem
+version: '1.0-SNAPSHOT'
+main: dev.ajaretro.retroBedrockTotem.RetroBedrockTotem
+api-version: '1.21'
+prefix: RetroBedrockTotem
+load: POSTWORLD
+authors: [ AJA RETRO ]
+description: BedRock Players from floodgate gets saved when they are about to die and have a totem in any place of their inventory
+website: ajaretro.dev
+
+
+depend: [floodgate]
