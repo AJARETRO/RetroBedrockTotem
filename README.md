@@ -22,42 +22,40 @@ TTTTTTT  OOOOO  TTTTTTT EEEEEEE M     M
 
 **By AJARETRO**
 
-A simple, lightweight plugin to improve the Bedrock (Floodgate) player experience by allowing totem activation from anywhere in their inventory.
+A lightweight plugin that gives Bedrock (Floodgate) players a custom buff: Totem of Undying activation from *anywhere* in their inventory!
 
 </div>
 
 ---
 
-### 🤔 What's the Problem?
+### 🚀 A Custom Buff for Bedrock Players
 
-On a vanilla Minecraft: Java Edition server, Totems of Undying only work if they are held in the main-hand or off-hand.
+On a typical server, Totems of Undying only save you if they're in your main-hand or off-hand.
 
-Bedrock Edition players are used to a different mechanic: **a totem works as long as it's *anywhere* in their inventory.** When a Bedrock player joins a Java server (using [Floodgate](https://github.com/GeyserMC/Floodgate)), they are suddenly forced to use the Java mechanic, which feels unnatural and often results in unfair deaths.
+**This plugin changes the rules.**
+
+It's designed to give your Bedrock (Floodgate) players a special advantage, perfect for fast-paced PvP, anarchy servers, or any world where you want to add a unique buff.
 
 ### ✨ What This Plugin Does
 
-**RetroBedrockTotem** fixes this parity issue!
+**RetroBedrockTotem** actively monitors your Bedrock players for fatal damage. If a Bedrock player is about to die, the plugin instantly scans their *entire inventory* for a Totem of Undying.
 
-This plugin detects when a Floodgate (Bedrock) player is about to die. If they are, it quickly scans their *entire inventory* for a Totem of Undying.
+If a totem is found anywhere:
+1.  The fatal blow is **cancelled**.
+2.  One totem is **consumed** from their inventory.
+3.  The standard totem effects are **triggered** (sound, particles, Regeneration, Absorption).
 
-If a totem is found, the plugin will:
-1.  **Cancel** the killing blow.
-2.  **Consume** one totem from their inventory.
-3.  **Play** all the usual totem effects (sound, particles).
-4.  **Grant** the Regeneration and Absorption effects, just like vanilla.
-
-This restores the expected Bedrock-style behavior and makes your server feel like home for Bedrock players.
+This allows for more aggressive playstyles and gives your Bedrock community a powerful quality-of-life feature that makes them just a bit more resilient in a fight.
 
 ### ⚙️ How It Works (Technically)
 
 This plugin is extremely lightweight and efficient.
 * It listens to the `EntityDamageEvent`.
-* It checks if the damaged entity is a `Player` and if the damage is a fatal blow.
-* It then uses the **Floodgate API** to verify the player is a Bedrock user.
+* It immediately checks if the damaged entity is a `Player`, if the damage is fatal, and (most importantly) if they are a **Bedrock player** via the Floodgate API.
 * **If and only if** all those conditions are met, it iterates through the player's inventory to find a `TOTEM_OF_UNDYING`.
 * The moment one is found, it cancels the event, consumes the item, and applies the effects.
 
-This process is highly optimized to add zero lag to your server.
+This entire process is highly optimized to add zero lag to your server's combat.
 
 ### 📦 Requirements
 
